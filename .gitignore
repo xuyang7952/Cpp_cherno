@@ -1,0 +1,57 @@
+# 编译生成的文件
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.a
+*.lib
+
+# 调试信息文件
+*.pdb
+*.idb
+*.ilk
+
+# 中间文件
+*.slo
+*.lo
+*.la
+*.gch
+*.mo
+
+# 预编译头文件
+*.pch
+*.h.gch
+
+# 构建目录
+build/
+bin/
+out/
+dist/
+*.dSYM/
+
+# 编辑器/IDE 生成的文件
+.vscode/
+.idea/
+*.suo
+*.ncb
+*.user
+*.userprefs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 日志文件
+*.log
+*.log.*
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# 生成的二进制文件
+*.bin
