@@ -1,10 +1,24 @@
 // #define INTEGER Cherno
-// #include<iostream>
+#include<iostream>
+#include<string>
+#include "Log.h"
+
 #if 1  // #if 1 参与编译,0 不参与
+
+// void log(const std::string& message) {
+//     std::cout << message << std::endl;
+// }   
+
 int mul(int a, int b) {
     return a * b;
 #include "EndBrace.h" // 里面就是}，编译器会做内容替换
 // }
+
+int main() {
+    log("mul");
+    mul(2, 3);
+    return 0;
+}
 #endif
 // 编译命令g++ -c Math.cpp -o Math.o
 //  只执行预处理阶段，不进行编译、汇编和链接:g++ -E Math.cpp -o Math.i
