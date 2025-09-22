@@ -24,5 +24,11 @@ int main() {
     log("程序执行完毕");
     // 编译命令g++ Log.cpp main.cpp -o log_example   ./log_example
     
+    bool flag = "a"=='b';
+    if(flag){
+        logInfo("a和b相等");
+    }
+    
+
     return 0;
 }
