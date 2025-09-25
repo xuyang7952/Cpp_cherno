@@ -10,7 +10,9 @@ public:
     // 注释掉的非虚函数版本
     // std::string GetName() { return "Entity"; }
     // 定义虚函数 GetName，返回实体名称
-    virtual std::string GetName() { return "Entity"; }
+    // virtual std::string GetName() { return "Entity"; }
+    // 定义纯虚函数 GetName，返回实体名称
+    virtual std::string GetName() = 0;
 };
 
 // 定义派生类 Player，继承自 Entity 类
@@ -25,6 +27,7 @@ public:
     // 注释掉的非重写版本
     // std::string GetName() { return m_Name; }
     // 重写基类的虚函数 GetName，返回玩家名称
+    // 重写基类的纯虚函数 GetName，纯虚函数，必须继承重写
     std::string GetName() override { return m_Name; }
 };
 
@@ -36,12 +39,12 @@ void func(Entity* e){
 // 主函数，程序入口
 int main ()
 {
-    // 创建一个 Entity 对象
-    Entity e;
+    // 创建一个 Entity 对象, 不能实例化一个纯虚函数的类
+    // Entity e;
     // 创建一个 Player 对象，名称为 "xuyang"
     Player p("xuyang");
     // 调用 func 函数打印 Entity 对象的名称
-    func(&e);
+    // func(&e);
     // 调用 func 函数打印 Player 对象的名称
     func(&p);    
     return 0;
